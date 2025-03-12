@@ -10,11 +10,10 @@ class Solution {
     revNumber < 0 && revNumber < (Integer.MIN_VALUE / 10)) {
     return 0;
 }
-
             revNumber = revNumber * 10 + lastNumber;
             x = x / 10;
         }
-        System.out.println(revNumber);
+       // System.out.println(revNumber);
         return revNumber;
     }
 }
