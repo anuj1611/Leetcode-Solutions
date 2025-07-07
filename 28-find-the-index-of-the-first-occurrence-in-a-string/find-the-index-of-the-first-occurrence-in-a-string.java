@@ -9,10 +9,11 @@ class Solution {
             while(j<needle.length() && haystack.charAt(i+j)==needle.charAt(j))
                 j++;
             if(j==needle.length()){
+                
                 return i;
             }
         }
-        
+
         return -1;
     }
 }
