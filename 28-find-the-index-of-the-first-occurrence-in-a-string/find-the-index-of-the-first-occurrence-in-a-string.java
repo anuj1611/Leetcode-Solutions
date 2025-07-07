@@ -12,6 +12,7 @@ class Solution {
                 return i;
             }
         }
+        
         return -1;
     }
 }
