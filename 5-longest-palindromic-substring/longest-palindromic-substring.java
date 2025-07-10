@@ -26,6 +26,7 @@ class Solution {
             left--;
             right++;
         }
+        
         return right - left - 1;
     }    
 }
