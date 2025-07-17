@@ -10,6 +10,7 @@ class Solution {
         if (s.charAt(0) == '-') { sign = -1; i++; }
         else if (s.charAt(0) == '+') { i++; }
 
+
         // Process numerical characters
         while (i < s.length()) {
             char ch = s.charAt(i);
