@@ -1,31 +1,21 @@
 class Solution {
-    // s = race a car -> racecar -> raceecar -> racecar
-    public static boolean checkPalindrome(String s){
-        int left = 0;
-        int right = s.length() - 1;
-        while(left < right){
-            if(s.charAt(left) != s.charAt(right)){
+    public boolean isPalindrome(String s) {
+        int p1=0;
+        int p2=s.length()-1;
+        while(p1<p2){
+            while(p1<p2 && !Character.isLetterOrDigit(s.charAt(p1))){
+                p1++;
+            }
+            while(p1<p2 && !Character.isLetterOrDigit(s.charAt(p2))){
+                p2--;
+            }
+            if (Character.toLowerCase(s.charAt(p1))!=Character.toLowerCase(s.charAt(p2))){
                 return false;
             }
-            left++;
-            right--;
+            p1++;
+            p2--;
         }
         return true;
-    }
-
-    public boolean isPalindrome(String s) {
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < s.length(); i++){
-            char ch = s.charAt(i);
-            if(Character.isLetter(ch) || Character.isDigit(ch)){
-                sb.append(ch);
-            }
-        }
-        String result = sb.toString();
-        result = result.toLowerCase();
-        if(checkPalindrome(result)){
-            return true;
-        }
-        return false;
+        
     }
 }
